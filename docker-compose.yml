@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+
+  php:
+    container_name: simple-event-sourcing-php
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    working_dir: /app
+    command: php -S localhost:80 -t /app
+    ports:
+      - 80:80
+    volumes:
+      - .:/app:delegated
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql
+    container_name: simple-event-sourcing-mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    env_file:
+      - .env
+
+  adminer:
+    image: adminer
+    container_name: simple-event-sourcing-adminer
+    ports:
+      - 8080:8080
+    links:
+      - mysql:db
+    depends_on:
+      - mysql
