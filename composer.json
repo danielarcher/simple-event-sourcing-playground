@@ -1,11 +1,14 @@
 {
   "autoload": {
     "psr-4": {
-      "Acme\\": "src/Acme",
+      "": "src",
       "Acme\\Test\\": "tests"
     }
   },
   "require": {
-    "phpunit/phpunit": "8.2.5"
+    "phpunit/phpunit": "8.2.5",
+    "php-di/php-di": "^6.0",
+    "ramsey/uuid": "^3.8",
+    "ext-json": "*"
   }
 }
