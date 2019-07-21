@@ -1,5 +1,11 @@
 {
   "autoload": {
-    "psr-4": {"": "src/"}
+    "psr-4": {
+      "Acme\\": "src/Acme",
+      "Acme\\Test\\": "tests"
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "8.2.5"
   }
 }
