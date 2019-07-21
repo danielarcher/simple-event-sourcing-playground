@@ -3,10 +3,10 @@
 namespace Acme\Domain;
 
 /**
- * Class RegisteredUser
+ * Class User
  * @package Acme\Domain
  */
-class RegisteredUser
+class User
 {
     /**
      * @var UserName
@@ -14,7 +14,7 @@ class RegisteredUser
     private $name;
 
     /**
-     * RegisteredUser constructor.
+     * User constructor.
      * @param UserName $name
      */
     public function __construct(UserName $name)
