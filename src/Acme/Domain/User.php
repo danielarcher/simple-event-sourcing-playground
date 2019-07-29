@@ -30,7 +30,7 @@ class User
      */
     public function id(): string
     {
-        return $this->id;
+        return $this->id->toString();
     }
 
     /**

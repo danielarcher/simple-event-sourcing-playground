@@ -13,4 +13,9 @@ class UserCreated implements Event
     {
         $this->user = $user;
     }
+
+    public function user()
+    {
+        return $this->user;
+    }
 }

@@ -9,6 +9,8 @@
     "phpunit/phpunit": "8.2.5",
     "php-di/php-di": "^6.0",
     "ramsey/uuid": "^3.8",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "doctrine/dbal": "^2.9"
   }
 }

@@ -11,7 +11,11 @@ class InMemoryRepository implements Repository
     public function save(string $value): void
     {
         $this->data[] = $value;
+    }
 
+    public function update($index, string $value): void
+    {
+        $this->data[$index] = $value;
     }
 
     public function get($index): string
